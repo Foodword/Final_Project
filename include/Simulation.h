@@ -9,9 +9,9 @@
 class Simulation {
     private:
     Map map;
-
+    bool flag;
     public:
-    Simulation(Map map);
+    Simulation(Map map, bool flag);
     ~Simulation();
     void run(); // runs a simulation and asks the user for an input to change a cell from alive to dead
 };

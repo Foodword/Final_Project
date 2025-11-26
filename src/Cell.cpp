@@ -19,6 +19,10 @@ bool Cell::is_alive() {
     return alive;
 }
 
+void Cell::set_alive(bool alive) {
+    this->alive = alive;
+}
+
 void Cell::checkSurroundings(Map* map) {
     int neighbortally = 0;
         for (int i = y-1;i < y+1; i++) {
