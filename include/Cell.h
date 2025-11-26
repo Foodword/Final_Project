@@ -15,6 +15,7 @@ public:
     Cell(bool alive, int x, int y);
     ~Cell();
     bool is_alive();
+    void set_alive(bool alive);
     void checkSurroundings(Map* map); //checks for the surroundings and implements the rules for the game of life
 };
 
