@@ -5,6 +5,20 @@
 #include "../include/Simulation.h"
 #include <iostream>
 using namespace std;
+
+void Simulation::print() {
+    for (int i = 0; i < map.getWidth(); i++) {
+        for (int j = 0; j < map.getHeight(); j++) {
+            cout<<"| ";
+            if (map.getCell(i,j).is_alive() == true) {
+                cout<< "X ";
+            }else {
+                cout<< ". ";
+            }
+        }
+    }
+}
+
 Simulation::Simulation(Map map, bool flag) : map(map), flag(flag) {
     cout<<"Welcome to Conway's game of life"<<endl;
     cout<<"To start enter a row and a column"<<endl;
@@ -37,6 +51,6 @@ Simulation::Simulation(Map map, bool flag) : map(map), flag(flag) {
                 }
             }
         }
-
+        print();
     }
 }
